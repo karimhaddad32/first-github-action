@@ -1,0 +1,13 @@
+name: First Workflow
+# When should this workflow be executed? use 'on' to determine that.
+# workflow_dispatch means "Start this workflow only if it got triggered manually"
+on: workflow_dispatch 
+ # runs-on specifies which environment to use.
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Print Greeting
+       run: echo "Hellow World"
+     - name: Print Goodbye
+       run: echo "Done - Bye!"
